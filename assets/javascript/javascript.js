@@ -1,12 +1,8 @@
 // connecting PetFinder API
 var pf = new petfinder.Client({
-  apiKey: "tk2M4TpBDTJF3U0WIfryfor948l4AN5Rlhab4r5K9RyzlGuwsm",
-  secret: "W9M0tIJ52td2d3TzuuhOAiGPT9mKWmGzHMIbKa0Q"
+  apiKey: "HXhiJjRfDuYpnR3qEGLZ3A2J3wdv7Aj8oLtqTqbBm31lZjsmiU",
+  secret: "KboKKC3HHujidOq6ODiMScif9apSRrUGGXQtR14c"
 });
-
-
-
-
 
 
 
@@ -28,6 +24,7 @@ $("#button-submit").on("click", function() {
   })
     // can i insert here the val from searchig var at the screen?
     
+    //made change to mirror petfinder API webPage
     .then(response => {
       // $("state").empty();
       for (var i=0; i<5; i++){
