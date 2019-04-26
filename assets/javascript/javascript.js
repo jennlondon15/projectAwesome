@@ -5,9 +5,10 @@ var pf = new petfinder.Client({
 });
 
 //I made too many keys so we have some to try, this is for the google maps embed API if anyone needs to see the documentation.
-var gMap = {apiKey: AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg,
-            apiKey2: AIzaSyAzBby-miAKzfPk7Cntf32RcUbkoRhn0P4,
-            apiKey3:AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E }
+var gMap = {apiKey: "AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg",
+            apiKey2: "AIzaSyAzBby-miAKzfPk7Cntf32RcUbkoRhn0P4",
+            apiKey3:"AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E",
+            queryURL:"https://www.google.com/maps/embed/v1/place?key=", }
 
 $("#button-submit").on("click", function() {
   // on submit button search for the pets by zip
