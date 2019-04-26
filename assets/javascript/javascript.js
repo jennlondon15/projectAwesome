@@ -6,20 +6,20 @@ var pf = new petfinder.Client({
 
 $("#button-submit").on("click", function() {
   // on submit button search for the pets by zip
+  event.preventDefault();
 
-  userZip = $("#zip")
-    .val()
-    .trim();
+  var userZip = $("#zip").val().trim();
   console.log("this is user Zip" + userZip);
 
   // if (use the answers from the user) ...than show this
   // if else (show this)
   // else (plant)
 
-  pf.animal
+  pf.animal.search({ location: userZip })
     // can i insert here the val from searchig var at the screen?
-    .search({ location: userZip })
-    .then(function(response) {
+    
+    //made change to mirror petfinder API webPage
+    .then(response => {
       // Do something with `response.data.animals`
       console.log(response);
 
