@@ -8,7 +8,8 @@ var pf = new petfinder.Client({
 var gMap = {apiKey: "AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg",
             apiKey2: "AIzaSyAzBby-miAKzfPk7Cntf32RcUbkoRhn0P4",
             apiKey3:"AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E",
-            queryURL:"https://www.google.com/maps/embed/v1/place?key=", }
+            queryURL:"https://www.google.com/maps/embed/v1/place?key=",
+            }
 
 $("#button-submit").on("click", function() {
   // on submit button search for the pets by zip
