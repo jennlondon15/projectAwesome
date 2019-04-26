@@ -1,25 +1,24 @@
 // connecting PetFinder API
 var pf = new petfinder.Client({
-  apiKey: "HXhiJjRfDuYpnR3qEGLZ3A2J3wdv7Aj8oLtqTqbBm31lZjsmiU",
-  secret: "KboKKC3HHujidOq6ODiMScif9apSRrUGGXQtR14c"
+  apiKey: "tk2M4TpBDTJF3U0WIfryfor948l4AN5Rlhab4r5K9RyzlGuwsm",
+  secret: "W9M0tIJ52td2d3TzuuhOAiGPT9mKWmGzHMIbKa0Q"
 });
 
 $("#button-submit").on("click", function() {
   // on submit button search for the pets by zip
+  event.preventDefault();
 
-  userZip = $("#zip")
-    .val()
-    .trim();
+  var userZip = $("#zip").val().trim();
   console.log("this is user Zip" + userZip);
 
   // if (use the answers from the user) ...than show this
   // if else (show this)
   // else (plant)
 
-  pf.animal
+  pf.animal.search({ location: userZip })
     // can i insert here the val from searchig var at the screen?
-    .search({ location: userZip })
-    .then(function(response) {
+    
+    .then(response => {
       // Do something with `response.data.animals`
       console.log(response);
 
