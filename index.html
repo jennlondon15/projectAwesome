@@ -8,7 +8,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
   </head>
@@ -16,16 +15,40 @@
   <body>
     <!-- to check if searcher by zip code is working -->
 
-      <input type="text" id="zip" placeholder="zip" />
-      <input class="submit" id ="button-submit" type="submit" value="find" />
+    <section class="form"></section>
+    <label for="zip">Zip Code</label>
+    <select id="zip" name="zip">
+    </select>
 
-      <div id="animalLoc"></div>
-      
+    <section class="form">
+      <label for="species">Species</label>
+      <select id="species" name="species">
+          <option></option>
+      </select>
+
+      <section class="form"></section>
+        <label for="age">Age</label>
+        <select id="age" name="age">
+            <option></option>
+        </select>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender"/>
+      <option></option>
+          <option></option>
+          <option>M</option>
+          <option>F</option>
+      </select>
+      <input type="submit" id="Match" class="button" value="Find Match!"/>
+  </section>
+  <ul id='dog'></ul>
   </body>
-    <!-- javascript  -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg&callback=initMap"
-async defer></script>
-
+  <!-- javascript  -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg&callback=initMap"
+    async
+    defer
+  ></script>
 </html>
