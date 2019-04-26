@@ -9,6 +9,7 @@ var gMap = {apiKey: "AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg",
             apiKey2: "AIzaSyAzBby-miAKzfPk7Cntf32RcUbkoRhn0P4",
             apiKey3:"AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E",
             queryURL:"https://www.google.com/maps/embed/v1/place?key=",
+            queryTestURL:"https://www.google.com/maps/embed/v1/place?key="+ gMap.apiKey+ "&q=Eiffel+Tower,Paris+France"
             }
 
 $("#button-submit").on("click", function() {
