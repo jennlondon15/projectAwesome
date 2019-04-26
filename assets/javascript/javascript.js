@@ -15,6 +15,7 @@ $("#button-submit").on("click", function() {
   event.preventDefault();
 
   var userZip = $("#zip").val().trim();
+  var userAge = $("#age").val().trim();
   console.log("this is user Zip" + userZip);
 
   // if (use the answers from the user) ...than show this
@@ -24,7 +25,7 @@ $("#button-submit").on("click", function() {
 
   pf.animal.search({ 
     location: userZip,
-  
+    age: userAge
   })
     // can i insert here the val from searchig var at the screen?
     
@@ -44,9 +45,17 @@ $("#button-submit").on("click", function() {
       var animalName = response.data.animals[i].name;
       // console.log(animalName);
 
+      //create var for state and get response
       var animalState = response.data.animals[i].contact.address.state;
-      console.log(animalState);
+        console.log(animalState);
+      //create var for address and get response
+      var animalAddress = response.data.animals[i].contact.address.address1;
+        console.log(animalAddress);
 
+
+
+
+        
       // var animalDiscription = response.data.animals[i].description;
       // console.log(animalDiscription);
       
