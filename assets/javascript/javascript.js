@@ -18,6 +18,7 @@ $("#button-submit").on("click", function() {
   pf.animal.search({ location: userZip })
     // can i insert here the val from searchig var at the screen?
     
+    //made change to mirror petfinder API webPage
     .then(response => {
       // Do something with `response.data.animals`
       console.log(response);
