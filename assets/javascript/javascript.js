@@ -15,29 +15,39 @@ $("#button-submit").on("click", function() {
   // if else (show this)
   // else (plant)
 
+
   pf.animal.search({ location: userZip })
     // can i insert here the val from searchig var at the screen?
     
     .then(response => {
+      for (var i=0; i<5; i++){
+
       // Do something with `response.data.animals`
       console.log(response);
 
-      var animalAge = response.data.animals[0].age;
+      var animalAge = response.data.animals[i].age;
       console.log("this is the dog in array" + animalAge);
 
-      var animalPhoto = response.data.animals[0].photos[0].medium;
+      var animalPhoto = response.data.animals[i].photos[i].medium;
       console.log(animalPhoto);
 
-      var animalName = response.data.animals[0].name;
+      var animalName = response.data.animals[i].name;
       console.log(animalName);
-      var animalAddress = response.data.animals[0].contact.address.state;
-      console.log(animalAddress);
 
-      var animalDiscription = response.data.animals[0].description;
+      var animalState = response.data.animals[i].contact.address.state;
+      console.log(animalState);
+
+      var animalDiscription = response.data.animals[i].description;
       console.log(animalDiscription);
+      }
+
     })
     .catch(function(error) {
       console.log(error);
       // Handle the error
-    });
-});
+    
+    })
+  
+    $("#animalLOC").append(animalState);
+
+  });
