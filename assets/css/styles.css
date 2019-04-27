@@ -2,8 +2,46 @@ header {
   display: flex;
   justify-content: space-around;
 }
+
+.notification {
+  height: 600px;
+  background: powderblue;
+  /* background-image: url("../images/dog.png"); */
+}
+
+.container {
+  position: relative;
+}
+
+#page-header {
+  border: 2px solid white;
+  margin: 50px auto;
+  height: 400px;
+  max-width: 80%;
+  z-index: -1;
+  
+}
+
+#for-dog-pic {
+  z-index: +1;
+  width: 340px;
+}
+
+#image-dog {
+  z-index: 1;
+  width: 340px;
+  position: absolute;
+  margin: 60px;;
+  
+
+}
+
 h1 {
   font-family: 'Rammetto One', cursive;
+  font-size: 80px;
+  
+  color: white;
+  float: right;
 }
 main {
   display: flex;
