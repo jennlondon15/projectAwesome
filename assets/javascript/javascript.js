@@ -50,10 +50,13 @@ $(function() {
         
         for (var i = 0; i < animalsArray; i++) {
           console.log(response);
+          
+          //if to check for picture, no picture, not included
+          if (!response.data.animals[i].photos[0]) {
+            continue }
+          var animalPhoto = response.data.animals[i].photos[0].small;
 
           var animalAge = response.data.animals[i].age;
-
-          var animalPhoto = response.data.animals[i].photos[0];
           var animalName = response.data.animals[i].name;
           var animalState = response.data.animals[i].contact.address.state;
           var animalAddress = response.data.animals[i].contact.address.address1;
