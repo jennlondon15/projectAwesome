@@ -7,7 +7,8 @@ $(function() {
       zoom: 8
     });
   }
-
+//GOogle API URL
+  var googleURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E&q=";
   // connecting PetFinder API
   var pf = new petfinder.Client({
     apiKey: "HXhiJjRfDuYpnR3qEGLZ3A2J3wdv7Aj8oLtqTqbBm31lZjsmiU",
@@ -82,12 +83,20 @@ $(function() {
           // responseDiscription.text(animalDiscription);
 
           $("#responseAnimal").prepend(animalDiv);
-         
+         function mapMaker (){
+            $("#map").empty();
+            console.log(animalAddress);
+            //Google Div placer!
+            $("#map").html("<iframe width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E&q=" + animalAddress + "' allowfullscreen> </iframe>")
+         }
+          mapMaker();
         }
       })
       .catch(function(error) {
         console.log(error);
         // Handle the error
       });
+      
+      
   });
 });
