@@ -61,7 +61,7 @@ $(function() {
           var responsePhoto = $("<img>");
               responsePhoto.attr("src", animalPhoto);
               responsePhoto.addClass("animal-pic");
-
+              responsePhoto.attr("val", animalAddress);
           var animalDiv = $("<div class='col-md-3'>");
               animalDiv.append(responsePhoto);
               animalDiv.addClass("for-pets");
@@ -85,16 +85,23 @@ $(function() {
           $("#responseAnimal").prepend(animalDiv);
          function mapMaker (){
             $("#map").empty();
-            console.log(animalAddress);
+           // console.log(animalAddress);
+           // var petAddress = $(this).val();
             //Google Div placer!
             $("#map").html("<iframe width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E&q=" + animalAddress + "' allowfullscreen> </iframe>")
          }
           
         }
-        mapMaker();
-        $(document).on("click", ".animal-pic", function(){
-          $(".modal").addClass("is-active")
+        
+        $(document).on("click", ".animal-pic", function (event){
+          
+          mapMaker()
+          $(".modal").show();
         })
+       $(".delete").on("click", function(){
+         $(".modal").hide();
+         
+       })
       })
       .catch(function(error) {
         console.log(error);
