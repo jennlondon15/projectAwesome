@@ -46,7 +46,7 @@ $(function() {
           console.log(response);
           
           //if to check for picture, no picture, not included
-          if (!response.data.animals[i].photos[0]) {
+          if (!response.data.animals[i].photos[0] && !response.data.animals[i].contact.address.address1) {
             continue }
           
           var animalPhoto = response.data.animals[i].photos[0].small;
