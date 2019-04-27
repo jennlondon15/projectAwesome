@@ -17,7 +17,7 @@ $(function() {
 
   $("#Match").on("click", function() {
     event.preventDefault();
-
+    
     var userZip = $("#zip").val().trim();
     var userAge = $("#age").val().trim();
     var userSpecies = $("#species").val().trim();
@@ -89,8 +89,12 @@ $(function() {
             //Google Div placer!
             $("#map").html("<iframe width='600' height='450' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC9WPR0Lch_bWed56_TKHgqgRRIiAdBD2E&q=" + animalAddress + "' allowfullscreen> </iframe>")
          }
-          mapMaker();
+          
         }
+        mapMaker();
+        $(document).on("click", ".animal-pic", function(){
+          $(".modal").addClass("is-active")
+        })
       })
       .catch(function(error) {
         console.log(error);
