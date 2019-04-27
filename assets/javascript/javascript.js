@@ -61,7 +61,7 @@ $(function() {
           var responsePhoto = $("<img>");
               responsePhoto.attr("src", animalPhoto);
               responsePhoto.addClass("animal-pic");
-
+              responsePhoto.attr("val", animalAddress);
           var animalDiv = $("<div class='col-md-3'>");
               animalDiv.append(responsePhoto);
               animalDiv.addClass("for-pets");
@@ -91,9 +91,11 @@ $(function() {
          }
           
         }
-        mapMaker();
+        
         $(document).on("click", ".animal-pic", function(){
-          $(".modal").addClass("is-active")
+          
+          
+          $(".modal").addClass("is-active");
         })
       })
       .catch(function(error) {
