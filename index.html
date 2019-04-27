@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
   <head>
-    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
     <title>PetMatch</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@petfinder/petfinder-js/dist/petfinder.min.js"></script>
@@ -13,44 +14,47 @@
   </head>
 
   <body>
-    <!-- to check if searcher by zip code is working -->
-
-
+   
     <section class="form"></section>
     <label for="zip">Zip Code</label>
-    <select id="zip" name="zip">
+    <input type="text" id="zip" name="zip">
     </select>
 
     <section class="form">
       <label for="species">Species</label>
       <select id="species" name="species">
-          <option></option>
+        <option value="0"></option>
+        <option value="Cat">Cat</option>
+        <option value="Dog">Dog</option>
+          
       </select>
 
 
       <section class="form"></section>
         <label for="age">Age</label>
         <select id="age" name="age">
-            <option></option>
+          <option value="0"></option>
+          <option value="Adult">Adult</option>
+          <option value="Baby">Baby</option>
+          <option value="Young">Young</option>
         </select>
 
       <label for="gender">Gender</label>
-      <select id="gender" name="gender"/>
-      <option></option>
-          <option></option>
-          <option>M</option>
-          <option>F</option>
+      <select id="gender" name="gender">
+          <option value="0"></option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
       </select>
       <input type="submit" id="Match" class="button" value="Find Match!"/>
-  </section>
+     </section>
+
   <ul id='dog'></ul>
+  <div id="responseAnimal"></div>
+  <div id="map"></div>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg&callback=initMap"async defer></script>
   </body>
   <!-- javascript  -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script type="text/javascript" src="assets/javascript/javascript.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHT_UHK6gwGk73hjnJWdWSaG3r6IfuQgg&callback=initMap"
-    async
-    defer
-  ></script>
+ 
 </html>
