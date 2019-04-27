@@ -1,53 +1,62 @@
-header {
-  display: flex;
-  justify-content: space-around;
-}
-
-.notification {
+.jumbotron {
+  position: relative;
   height: 600px;
   background: powderblue;
+  margin-top: 0 auto;
+
   /* background-image: url("../images/dog.png"); */
 }
 
-.container {
-  position: relative;
-}
-
-#page-header {
+.jumbotron-container {
+  position: absolute;
+  top: 15%;
   border: 2px solid white;
-  margin: 50px auto;
+  left: 10%;
   height: 400px;
-  max-width: 80%;
-  z-index: -1;
-  
+  width: 80%;
 }
 
-#for-dog-pic {
-  z-index: +1;
-  width: 340px;
+.jumbotron-container > * {
+  padding: 20px;
 }
 
 #image-dog {
-  z-index: 1;
+  z-index: 10;
   width: 340px;
   position: absolute;
+  right: -70px;
+  bottom: -30px;
   margin: 60px;;
-  
+  float: right;
+ 
 
 }
 
 h1 {
+  clear: both;
   font-family: 'Rammetto One', cursive;
   font-size: 80px;
-  
   color: white;
-  float: right;
+  text-align: left;
+  
 }
+
+.lead {
+  font-family: 'Rammetto One', cursive;
+  color: white;
+  text-align: left;
+  font-size: 30px;
+  margin-top: 20px;
+  
+}
+
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .info {
   display: flex;
   flex-direction: column;
@@ -56,6 +65,7 @@ main {
 .info h2 {
   font-family: 'Roboto', sans-serif;
 }
+
 .info p {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
